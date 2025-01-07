@@ -1,0 +1,15 @@
+2025-01-07 13:45:41,300 - aiogram.dispatcher - dispatcher - Start polling ✔️ 
+2025-01-07 13:45:41,589 - aiogram.dispatcher - dispatcher - Run polling for bot @ToxGen_bot id=7133892930 - 'ToxGen' ✔️ 
+2025-01-07 13:46:03,174 - root - start - Проверка есть ли база данных ✔️ 
+2025-01-07 13:46:03,247 - root - start - Таблицы созданы ✔️ 
+2025-01-07 13:46:03,990 - aiogram.event - dispatcher - Update id=662352106 is handled. Duration 817 ms by bot id=7133892930 ✔️ 
+2025-01-07 13:46:06,052 - aiogram.event - dispatcher - Update id=662352107 is not handled. Duration 31 ms by bot id=7133892930 ✔️ 
+2025-01-07 13:46:37,944 - aiogram.event - dispatcher - Update id=662352108 is not handled. Duration 47 ms by bot id=7133892930 ✔️ 
+2025-01-07 13:46:38,145 - aiogram.event - dispatcher - Update id=662352109 is not handled. Duration 15 ms by bot id=7133892930 ✔️ 
+2025-01-07 13:46:38,343 - aiogram.event - dispatcher - Update id=662352110 is not handled. Duration 21 ms by bot id=7133892930 ✔️ 
+2025-01-07 13:46:38,766 - aiogram.event - dispatcher - Update id=662352111 is not handled. Duration 201 ms by bot id=7133892930 ✔️ 
+2025-01-07 13:46:38,906 - aiogram.event - dispatcher - Update id=662352112 is not handled. Duration 79 ms by bot id=7133892930 ✔️ 
+2025-01-07 13:46:39,142 - aiogram.event - dispatcher - Update id=662352113 is not handled. Duration 12 ms by bot id=7133892930 ✔️ 
+2025-01-07 13:46:39,220 - aiogram.event - dispatcher - Update id=662352114 is not handled. Duration 9 ms by bot id=7133892930 ✔️ 
+2025-01-07 13:46:39,321 - aiogram.event - dispatcher - Update id=662352115 is not handled. Duration 30 ms by bot id=7133892930 ✔️ 
+2025-01-07 13:46:39,527 - aiogram.event - dispatcher - Update id=662352116 is not handled. Duration 18 ms by bot id=7133892930 ✔️ 
