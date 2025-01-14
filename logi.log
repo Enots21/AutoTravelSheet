@@ -1,15 +1,247 @@
-2025-01-07 13:45:41,300 - aiogram.dispatcher - dispatcher - Start polling ✔️ 
-2025-01-07 13:45:41,589 - aiogram.dispatcher - dispatcher - Run polling for bot @ToxGen_bot id=7133892930 - 'ToxGen' ✔️ 
-2025-01-07 13:46:03,174 - root - start - Проверка есть ли база данных ✔️ 
-2025-01-07 13:46:03,247 - root - start - Таблицы созданы ✔️ 
-2025-01-07 13:46:03,990 - aiogram.event - dispatcher - Update id=662352106 is handled. Duration 817 ms by bot id=7133892930 ✔️ 
-2025-01-07 13:46:06,052 - aiogram.event - dispatcher - Update id=662352107 is not handled. Duration 31 ms by bot id=7133892930 ✔️ 
-2025-01-07 13:46:37,944 - aiogram.event - dispatcher - Update id=662352108 is not handled. Duration 47 ms by bot id=7133892930 ✔️ 
-2025-01-07 13:46:38,145 - aiogram.event - dispatcher - Update id=662352109 is not handled. Duration 15 ms by bot id=7133892930 ✔️ 
-2025-01-07 13:46:38,343 - aiogram.event - dispatcher - Update id=662352110 is not handled. Duration 21 ms by bot id=7133892930 ✔️ 
-2025-01-07 13:46:38,766 - aiogram.event - dispatcher - Update id=662352111 is not handled. Duration 201 ms by bot id=7133892930 ✔️ 
-2025-01-07 13:46:38,906 - aiogram.event - dispatcher - Update id=662352112 is not handled. Duration 79 ms by bot id=7133892930 ✔️ 
-2025-01-07 13:46:39,142 - aiogram.event - dispatcher - Update id=662352113 is not handled. Duration 12 ms by bot id=7133892930 ✔️ 
-2025-01-07 13:46:39,220 - aiogram.event - dispatcher - Update id=662352114 is not handled. Duration 9 ms by bot id=7133892930 ✔️ 
-2025-01-07 13:46:39,321 - aiogram.event - dispatcher - Update id=662352115 is not handled. Duration 30 ms by bot id=7133892930 ✔️ 
-2025-01-07 13:46:39,527 - aiogram.event - dispatcher - Update id=662352116 is not handled. Duration 18 ms by bot id=7133892930 ✔️ 
+2025-01-14 00:30:13,581 - aiogram.dispatcher - dispatcher - Start polling ✔️ 
+2025-01-14 00:30:13,840 - aiogram.dispatcher - dispatcher - Run polling for bot @Ckevin_bot id=8123814960 - 'Ckevin' ✔️ 
+2025-01-14 00:30:14,001 - aiogram.event - dispatcher - Update id=239444155 is not handled. Duration 16 ms by bot id=8123814960 ✔️ 
+2025-01-14 00:30:14,001 - aiogram.event - dispatcher - Cause exception while process update id=239444155 by bot id=8123814960
+ValidationError: 4 validation errors for SendMessage
+reply_markup.InlineKeyboardMarkup
+  Input should be a valid dictionary or instance of InlineKeyboardMarkup [type=model_type, input_value=<zip object at 0x000002467E2319C0>, input_type=zip]
+    For further information visit https://errors.pydantic.dev/2.5/v/model_type
+reply_markup.ReplyKeyboardMarkup
+  Input should be a valid dictionary or instance of ReplyKeyboardMarkup [type=model_type, input_value=<zip object at 0x000002467E2319C0>, input_type=zip]
+    For further information visit https://errors.pydantic.dev/2.5/v/model_type
+reply_markup.ReplyKeyboardRemove
+  Input should be a valid dictionary or instance of ReplyKeyboardRemove [type=model_type, input_value=<zip object at 0x000002467E2319C0>, input_type=zip]
+    For further information visit https://errors.pydantic.dev/2.5/v/model_type
+reply_markup.ForceReply
+  Input should be a valid dictionary or instance of ForceReply [type=model_type, input_value=<zip object at 0x000002467E2319C0>, input_type=zip]
+    For further information visit https://errors.pydantic.dev/2.5/v/model_type ✔️ 
+Traceback (most recent call last):
+  File "C:\Users\Даниил\AppData\Local\Programs\Python\Python312\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Даниил\AppData\Local\Programs\Python\Python312\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Даниил\AppData\Local\Programs\Python\Python312\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Даниил\AppData\Local\Programs\Python\Python312\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Даниил\AppData\Local\Programs\Python\Python312\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Даниил\AppData\Local\Programs\Python\Python312\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Даниил\AppData\Local\Programs\Python\Python312\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Даниил\AppData\Local\Programs\Python\Python312\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Даниил\AppData\Local\Programs\Python\Python312\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Даниил\AppData\Local\Programs\Python\Python312\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Даниил\AppData\Local\Programs\Python\Python312\Lib\site-packages\aiogram\dispatcher\router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Даниил\AppData\Local\Programs\Python\Python312\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Даниил\AppData\Local\Programs\Python\Python312\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Даниил\AppData\Local\Programs\Python\Python312\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Даниил\AppData\Local\Programs\Python\Python312\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Даниил\AppData\Local\Programs\Python\Python312\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Даниил\Desktop\IT\tgbot\handlers\start.py", line 271, in info_car
+    await message.answer(f'Выберите машину:', reply_markup=ss)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Даниил\AppData\Local\Programs\Python\Python312\Lib\site-packages\aiogram\types\message.py", line 2091, in answer
+    return SendMessage(
+           ^^^^^^^^^^^^
+  File "C:\Users\Даниил\AppData\Local\Programs\Python\Python312\Lib\site-packages\pydantic\main.py", line 164, in __init__
+    __pydantic_self__.__pydantic_validator__.validate_python(data, self_instance=__pydantic_self__)
+pydantic_core._pydantic_core.ValidationError: 4 validation errors for SendMessage
+reply_markup.InlineKeyboardMarkup
+  Input should be a valid dictionary or instance of InlineKeyboardMarkup [type=model_type, input_value=<zip object at 0x000002467E2319C0>, input_type=zip]
+    For further information visit https://errors.pydantic.dev/2.5/v/model_type
+reply_markup.ReplyKeyboardMarkup
+  Input should be a valid dictionary or instance of ReplyKeyboardMarkup [type=model_type, input_value=<zip object at 0x000002467E2319C0>, input_type=zip]
+    For further information visit https://errors.pydantic.dev/2.5/v/model_type
+reply_markup.ReplyKeyboardRemove
+  Input should be a valid dictionary or instance of ReplyKeyboardRemove [type=model_type, input_value=<zip object at 0x000002467E2319C0>, input_type=zip]
+    For further information visit https://errors.pydantic.dev/2.5/v/model_type
+reply_markup.ForceReply
+  Input should be a valid dictionary or instance of ForceReply [type=model_type, input_value=<zip object at 0x000002467E2319C0>, input_type=zip]
+    For further information visit https://errors.pydantic.dev/2.5/v/model_type
+2025-01-14 00:30:16,148 - aiogram.event - dispatcher - Update id=239444156 is not handled. Duration 0 ms by bot id=8123814960 ✔️ 
+2025-01-14 00:30:16,149 - aiogram.event - dispatcher - Cause exception while process update id=239444156 by bot id=8123814960
+ValidationError: 4 validation errors for SendMessage
+reply_markup.InlineKeyboardMarkup
+  Input should be a valid dictionary or instance of InlineKeyboardMarkup [type=model_type, input_value=<zip object at 0x000002467E231300>, input_type=zip]
+    For further information visit https://errors.pydantic.dev/2.5/v/model_type
+reply_markup.ReplyKeyboardMarkup
+  Input should be a valid dictionary or instance of ReplyKeyboardMarkup [type=model_type, input_value=<zip object at 0x000002467E231300>, input_type=zip]
+    For further information visit https://errors.pydantic.dev/2.5/v/model_type
+reply_markup.ReplyKeyboardRemove
+  Input should be a valid dictionary or instance of ReplyKeyboardRemove [type=model_type, input_value=<zip object at 0x000002467E231300>, input_type=zip]
+    For further information visit https://errors.pydantic.dev/2.5/v/model_type
+reply_markup.ForceReply
+  Input should be a valid dictionary or instance of ForceReply [type=model_type, input_value=<zip object at 0x000002467E231300>, input_type=zip]
+    For further information visit https://errors.pydantic.dev/2.5/v/model_type ✔️ 
+Traceback (most recent call last):
+  File "C:\Users\Даниил\AppData\Local\Programs\Python\Python312\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Даниил\AppData\Local\Programs\Python\Python312\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Даниил\AppData\Local\Programs\Python\Python312\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Даниил\AppData\Local\Programs\Python\Python312\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Даниил\AppData\Local\Programs\Python\Python312\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Даниил\AppData\Local\Programs\Python\Python312\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Даниил\AppData\Local\Programs\Python\Python312\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Даниил\AppData\Local\Programs\Python\Python312\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Даниил\AppData\Local\Programs\Python\Python312\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Даниил\AppData\Local\Programs\Python\Python312\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Даниил\AppData\Local\Programs\Python\Python312\Lib\site-packages\aiogram\dispatcher\router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Даниил\AppData\Local\Programs\Python\Python312\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Даниил\AppData\Local\Programs\Python\Python312\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Даниил\AppData\Local\Programs\Python\Python312\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Даниил\AppData\Local\Programs\Python\Python312\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Даниил\AppData\Local\Programs\Python\Python312\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Даниил\Desktop\IT\tgbot\handlers\start.py", line 271, in info_car
+    await message.answer(f'Выберите машину:', reply_markup=ss)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Даниил\AppData\Local\Programs\Python\Python312\Lib\site-packages\aiogram\types\message.py", line 2091, in answer
+    return SendMessage(
+           ^^^^^^^^^^^^
+  File "C:\Users\Даниил\AppData\Local\Programs\Python\Python312\Lib\site-packages\pydantic\main.py", line 164, in __init__
+    __pydantic_self__.__pydantic_validator__.validate_python(data, self_instance=__pydantic_self__)
+pydantic_core._pydantic_core.ValidationError: 4 validation errors for SendMessage
+reply_markup.InlineKeyboardMarkup
+  Input should be a valid dictionary or instance of InlineKeyboardMarkup [type=model_type, input_value=<zip object at 0x000002467E231300>, input_type=zip]
+    For further information visit https://errors.pydantic.dev/2.5/v/model_type
+reply_markup.ReplyKeyboardMarkup
+  Input should be a valid dictionary or instance of ReplyKeyboardMarkup [type=model_type, input_value=<zip object at 0x000002467E231300>, input_type=zip]
+    For further information visit https://errors.pydantic.dev/2.5/v/model_type
+reply_markup.ReplyKeyboardRemove
+  Input should be a valid dictionary or instance of ReplyKeyboardRemove [type=model_type, input_value=<zip object at 0x000002467E231300>, input_type=zip]
+    For further information visit https://errors.pydantic.dev/2.5/v/model_type
+reply_markup.ForceReply
+  Input should be a valid dictionary or instance of ForceReply [type=model_type, input_value=<zip object at 0x000002467E231300>, input_type=zip]
+    For further information visit https://errors.pydantic.dev/2.5/v/model_type
+2025-01-14 03:30:24,165 - aiogram.dispatcher - dispatcher - Failed to fetch updates - TelegramNetworkError: HTTP Client says - Request timeout error ✔️ 
+2025-01-14 03:30:24,166 - aiogram.dispatcher - dispatcher - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8123814960) ✔️ 
+2025-01-14 03:30:25,325 - aiogram.dispatcher - dispatcher - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [getaddrinfo failed] ✔️ 
+2025-01-14 03:30:25,325 - aiogram.dispatcher - dispatcher - Sleep for 1.355234 seconds and try again... (tryings = 1, bot id = 8123814960) ✔️ 
+2025-01-14 03:30:26,696 - aiogram.dispatcher - dispatcher - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [getaddrinfo failed] ✔️ 
+2025-01-14 03:30:26,697 - aiogram.dispatcher - dispatcher - Sleep for 1.732531 seconds and try again... (tryings = 2, bot id = 8123814960) ✔️ 
+2025-01-14 03:30:28,456 - aiogram.dispatcher - dispatcher - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [getaddrinfo failed] ✔️ 
+2025-01-14 03:30:28,457 - aiogram.dispatcher - dispatcher - Sleep for 2.179547 seconds and try again... (tryings = 3, bot id = 8123814960) ✔️ 
+2025-01-14 03:30:30,645 - aiogram.dispatcher - dispatcher - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [getaddrinfo failed] ✔️ 
+2025-01-14 03:30:30,645 - aiogram.dispatcher - dispatcher - Sleep for 2.784782 seconds and try again... (tryings = 4, bot id = 8123814960) ✔️ 
+2025-01-14 13:19:21,316 - aiogram.dispatcher - dispatcher - Failed to fetch updates - TelegramNetworkError: HTTP Client says - Request timeout error ✔️ 
+2025-01-14 13:19:21,341 - aiogram.dispatcher - dispatcher - Sleep for 3.545521 seconds and try again... (tryings = 5, bot id = 8123814960) ✔️ 
+2025-01-14 13:19:25,075 - aiogram.dispatcher - dispatcher - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [getaddrinfo failed] ✔️ 
+2025-01-14 13:19:25,075 - aiogram.dispatcher - dispatcher - Sleep for 4.753705 seconds and try again... (tryings = 6, bot id = 8123814960) ✔️ 
+2025-01-14 13:19:30,498 - aiogram.dispatcher - dispatcher - Connection established (tryings = 7, bot id = 8123814960) ✔️ 
+2025-01-14 13:19:31,565 - aiogram.event - dispatcher - Update id=239444158 is not handled. Duration 1046 ms by bot id=8123814960 ✔️ 
+2025-01-14 16:59:05,242 - aiogram.dispatcher - dispatcher - Failed to fetch updates - TelegramNetworkError: HTTP Client says - Request timeout error ✔️ 
+2025-01-14 16:59:05,253 - aiogram.dispatcher - dispatcher - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8123814960) ✔️ 
+2025-01-14 16:59:06,377 - aiogram.dispatcher - dispatcher - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [getaddrinfo failed] ✔️ 
+2025-01-14 16:59:06,377 - aiogram.dispatcher - dispatcher - Sleep for 1.153866 seconds and try again... (tryings = 1, bot id = 8123814960) ✔️ 
+2025-01-14 16:59:07,539 - aiogram.dispatcher - dispatcher - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [getaddrinfo failed] ✔️ 
+2025-01-14 16:59:07,539 - aiogram.dispatcher - dispatcher - Sleep for 1.673307 seconds and try again... (tryings = 2, bot id = 8123814960) ✔️ 
+2025-01-14 16:59:09,291 - aiogram.dispatcher - dispatcher - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [getaddrinfo failed] ✔️ 
+2025-01-14 16:59:09,291 - aiogram.dispatcher - dispatcher - Sleep for 2.201135 seconds and try again... (tryings = 3, bot id = 8123814960) ✔️ 
+2025-01-14 16:59:11,494 - aiogram.dispatcher - dispatcher - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [getaddrinfo failed] ✔️ 
+2025-01-14 16:59:11,494 - aiogram.dispatcher - dispatcher - Sleep for 2.718591 seconds and try again... (tryings = 4, bot id = 8123814960) ✔️ 
+2025-01-14 16:59:24,783 - aiogram.dispatcher - dispatcher - Connection established (tryings = 5, bot id = 8123814960) ✔️ 
+2025-01-14 20:48:08,641 - aiogram.dispatcher - dispatcher - Failed to fetch updates - TelegramNetworkError: HTTP Client says - Request timeout error ✔️ 
+2025-01-14 20:48:08,641 - aiogram.dispatcher - dispatcher - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8123814960) ✔️ 
+2025-01-14 20:48:09,811 - aiogram.dispatcher - dispatcher - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [getaddrinfo failed] ✔️ 
+2025-01-14 20:48:09,811 - aiogram.dispatcher - dispatcher - Sleep for 1.224138 seconds and try again... (tryings = 1, bot id = 8123814960) ✔️ 
+2025-01-14 20:48:11,044 - aiogram.dispatcher - dispatcher - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [getaddrinfo failed] ✔️ 
+2025-01-14 20:48:11,044 - aiogram.dispatcher - dispatcher - Sleep for 1.701753 seconds and try again... (tryings = 2, bot id = 8123814960) ✔️ 
+2025-01-14 20:48:13,007 - aiogram.dispatcher - dispatcher - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [getaddrinfo failed] ✔️ 
+2025-01-14 20:48:13,010 - aiogram.dispatcher - dispatcher - Sleep for 2.279371 seconds and try again... (tryings = 3, bot id = 8123814960) ✔️ 
+2025-01-14 20:48:15,387 - aiogram.dispatcher - dispatcher - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [getaddrinfo failed] ✔️ 
+2025-01-14 20:48:15,387 - aiogram.dispatcher - dispatcher - Sleep for 3.025868 seconds and try again... (tryings = 4, bot id = 8123814960) ✔️ 
+2025-01-14 20:48:28,976 - aiogram.dispatcher - dispatcher - Connection established (tryings = 5, bot id = 8123814960) ✔️ 
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  2025-01-14 03:30:24,351 - aiogram.dispatcher - dispatcher - Failed to fetch updates - TelegramNetworkError: HTTP Client says - Request timeout error ✔️ 
+2025-01-14 03:30:24,358 - aiogram.dispatcher - dispatcher - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7133892930) ✔️ 
+2025-01-14 03:30:25,525 - aiogram.dispatcher - dispatcher - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [getaddrinfo failed] ✔️ 
+2025-01-14 03:30:25,526 - aiogram.dispatcher - dispatcher - Sleep for 1.456349 seconds and try again... (tryings = 1, bot id = 7133892930) ✔️ 
+2025-01-14 03:30:26,992 - aiogram.dispatcher - dispatcher - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [getaddrinfo failed] ✔️ 
+2025-01-14 03:30:26,993 - aiogram.dispatcher - dispatcher - Sleep for 2.037910 seconds and try again... (tryings = 2, bot id = 7133892930) ✔️ 
+2025-01-14 03:30:29,027 - aiogram.dispatcher - dispatcher - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [getaddrinfo failed] ✔️ 
+2025-01-14 03:30:29,027 - aiogram.dispatcher - dispatcher - Sleep for 2.611973 seconds and try again... (tryings = 3, bot id = 7133892930) ✔️ 
+2025-01-14 13:19:21,496 - aiogram.dispatcher - dispatcher - Failed to fetch updates - TelegramNetworkError: HTTP Client says - Request timeout error ✔️ 
+2025-01-14 13:19:21,496 - aiogram.dispatcher - dispatcher - Sleep for 3.329811 seconds and try again... (tryings = 4, bot id = 7133892930) ✔️ 
+2025-01-14 13:19:24,840 - aiogram.dispatcher - dispatcher - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [getaddrinfo failed] ✔️ 
+2025-01-14 13:19:24,840 - aiogram.dispatcher - dispatcher - Sleep for 4.247368 seconds and try again... (tryings = 5, bot id = 7133892930) ✔️ 
+2025-01-14 13:19:29,098 - aiogram.dispatcher - dispatcher - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [getaddrinfo failed] ✔️ 
+2025-01-14 13:19:29,098 - aiogram.dispatcher - dispatcher - Sleep for 4.940863 seconds and try again... (tryings = 6, bot id = 7133892930) ✔️ 
+2025-01-14 13:19:44,277 - aiogram.dispatcher - dispatcher - Connection established (tryings = 7, bot id = 7133892930) ✔️ 
+2025-01-14 16:59:05,204 - aiogram.dispatcher - dispatcher - Failed to fetch updates - TelegramNetworkError: HTTP Client says - Request timeout error ✔️ 
+2025-01-14 16:59:05,220 - aiogram.dispatcher - dispatcher - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7133892930) ✔️ 
+2025-01-14 16:59:06,330 - aiogram.dispatcher - dispatcher - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [getaddrinfo failed] ✔️ 
+2025-01-14 16:59:06,330 - aiogram.dispatcher - dispatcher - Sleep for 1.257261 seconds and try again... (tryings = 1, bot id = 7133892930) ✔️ 
+2025-01-14 16:59:07,602 - aiogram.dispatcher - dispatcher - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [getaddrinfo failed] ✔️ 
+2025-01-14 16:59:07,602 - aiogram.dispatcher - dispatcher - Sleep for 1.843294 seconds and try again... (tryings = 2, bot id = 7133892930) ✔️ 
+2025-01-14 16:59:09,447 - aiogram.dispatcher - dispatcher - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [getaddrinfo failed] ✔️ 
+2025-01-14 16:59:09,447 - aiogram.dispatcher - dispatcher - Sleep for 2.228287 seconds and try again... (tryings = 3, bot id = 7133892930) ✔️ 
+2025-01-14 16:59:11,682 - aiogram.dispatcher - dispatcher - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [getaddrinfo failed] ✔️ 
+2025-01-14 16:59:11,682 - aiogram.dispatcher - dispatcher - Sleep for 2.908708 seconds and try again... (tryings = 4, bot id = 7133892930) ✔️ 
+2025-01-14 16:59:24,861 - aiogram.dispatcher - dispatcher - Connection established (tryings = 5, bot id = 7133892930) ✔️ 
+2025-01-14 20:48:08,641 - aiogram.dispatcher - dispatcher - Failed to fetch updates - TelegramNetworkError: HTTP Client says - Request timeout error ✔️ 
+2025-01-14 20:48:08,641 - aiogram.dispatcher - dispatcher - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7133892930) ✔️ 
+2025-01-14 20:48:10,388 - aiogram.dispatcher - dispatcher - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [getaddrinfo failed] ✔️ 
+2025-01-14 20:48:10,388 - aiogram.dispatcher - dispatcher - Sleep for 1.365069 seconds and try again... (tryings = 1, bot id = 7133892930) ✔️ 
+2025-01-14 20:48:11,763 - aiogram.dispatcher - dispatcher - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [getaddrinfo failed] ✔️ 
+2025-01-14 20:48:11,763 - aiogram.dispatcher - dispatcher - Sleep for 1.737490 seconds and try again... (tryings = 2, bot id = 7133892930) ✔️ 
+2025-01-14 20:48:13,512 - aiogram.dispatcher - dispatcher - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [getaddrinfo failed] ✔️ 
+2025-01-14 20:48:13,512 - aiogram.dispatcher - dispatcher - Sleep for 2.293532 seconds and try again... (tryings = 3, bot id = 7133892930) ✔️ 
+2025-01-14 20:48:16,106 - aiogram.dispatcher - dispatcher - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [getaddrinfo failed] ✔️ 
+2025-01-14 20:48:16,106 - aiogram.dispatcher - dispatcher - Sleep for 2.990782 seconds and try again... (tryings = 4, bot id = 7133892930) ✔️ 
+2025-01-14 20:48:29,830 - aiogram.dispatcher - dispatcher - Connection established (tryings = 5, bot id = 7133892930) ✔️ 
